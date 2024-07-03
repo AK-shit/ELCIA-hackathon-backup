@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="#" data-section="dashboard">Home</a></li>
+                <li><a href="#" data-section="borewells-section">Borewells</a></li>
+                <li><a href="#" data-section="issues-section">Issues</a></li>
+                <li><a href="#" data-section="rewards-section">Rewards</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <a href="#" id="login-link">Login</a>
+            <a href="#" id="signup-link">Sign Up</a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="#" data-section="dashboard">Home</a>
+                <a href="#" data-section="borewells-section">Borewells</a>
+                <a href="#" data-section="issues-section">Issues</a>
+                <a href="#" data-section="rewards-section">Rewards</a>
+                <a href="#" id="login-link-dropdown">Login</a>
+                <a href="#" id="signup-link-dropdown">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="dashboard" class="dashboard">
+        <div class="dashboard-box borewells" data-section="borewells-section">
+            <h3>Borewells Connected</h3>
+            <p>10</p>
+        </div>
+        <div class="dashboard-box issues" data-section="issues-section">
+            <h3>Issues</h3>
+            <p>No issues</p>
+        </div>
+        <div class="dashboard-box cashback" data-section="rewards-section">
+            <h3>Total Cashback</h3>
+            <p>$100</p>
+        </div>
+        <div class="dashboard-box graph" data-section="usage-section">
+            <h3>Monthly Usage</h3>
+            <svg class="line-chart"></svg>
+        </div>
+    </div>
+
+    <div id="borewells-section" class="section" style="display: none;">
+        <h1>Borewells</h1>
+        <p>Details about borewells...</p>
+    </div>
+
+    <div id="issues-section" class="section" style="display: none;">
+        <h1>Issues</h1>
+        <p>Details about issues...</p>
+    </div>
+
+    <div id="rewards-section" class="section" style="display: none;">
+        <h1>Rewards</h1>
+        <p>Details about rewards...</p>
+    </div>
+
+    <div id="usage-section" class="section" style="display: none;">
+        <h1>Monthly Usage</h1>
+        <h1>Water Usage Data</h1>
+        <table id="water-usage-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Borewell ID</th>
+                    <th>Water Used</th>
+                    <th>Date Used</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
